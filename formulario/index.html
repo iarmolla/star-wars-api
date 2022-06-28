@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap" rel="stylesheet">
+    <title>Formulario</title>
+</head>
+<body>
+    <i class="fas fa-exclamation-triangle" id="formulario__validacion-estado"></i> 
+    <form class="formulario" id="formulario" method="post">
+        <div class="formulario__grupo" id="grupo__usuario">
+            <h1 class="mover">Login</h1>
+            <label class="formulario__label" id="grupo__usuario">Usuario</label>
+            <div class="formulario__grupo-input">
+                <input id="user" class="formulario__input" name="user" type="text" placeholder="Ingrese su nombre de usuario" required>
+                <i id="formulario__validacion-estado" class="fas fa-exclamation-triangle" ></i>
+            </div> 
+            <p class="formulario__input-error">El usuario es incorrecto</p>         
+        </div>      
+        <div class="formulario__grupo" id="grupo__password">
+            <label class="formulario__label" id="grupo__password">Contraseña</label>
+            <div class="formulario__grupo-input">
+                <input class="formulario__input" name="password" type="password" placeholder="Ingrese su contraseña" required>
+                <i class="fas fa-exclamation-triangle" id="formulario__validacion-estado"></i>               
+            </div>   
+            <p class="formulario__input-error">Clave Invalida<br>La clave debe tener entre 8 y 16 caracteres numericos</p>       
+        </div>   
+        <div class="formulario__grupo-terminos" id="grupo__terminos">
+            <label class="formulario__label">
+                <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+                Acepto los terminos y condiciones
+            </label>
+        </div>
+        <div class="formulario__grupo" id="formulario__grupo-btn-enviar">           
+            <button type="submit" class="formulario__btn" onclick ="redireccionar(event)">INICIAR SESION</button>
+        </div>
+    </form>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="javascript.js"></script>
+</body>
+</html>
